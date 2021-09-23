@@ -4,7 +4,7 @@
 /* GLOBAL CSS */
 
 :root {
-  --main-color-1: #ececec;
+  --main-color-1: #f0f0f0;
   --main-color-2: #13a88c;
 
   --color-titulo-1: #13a88c;
@@ -184,7 +184,8 @@ ul {
   background-color: var(--main-color-1);
 }
 
-.home .container-fluid {
+.home .container-fluid,
+.marketing .container-fluid {
   margin: 0 10vw;
 }
 
@@ -244,7 +245,7 @@ ul {
   transform: scale(1);
 }
 
-/* ----------- HOME --------------  */
+/* ----------- HOME SECTION --------------  */
 .home {
   min-height: 100vh;
   padding: 150px 0;
@@ -318,16 +319,19 @@ ul {
 
 .home-apps div > span {
   color: var(--black-200);
-  font-size: 20px;
+  font-size: 15px;
 }
-.home-apps .app {
+
+.home-apps .apps .app:not(:first-child) {
+  margin-left: 10px;
 }
+
 .home-apps .app-item {
   background-color: var(--black-900);
-  padding: 5px 10px;
+  padding: 0px 10px;
   display: flex;
   margin: 0;
-  border-radius: 10px;
+  border-radius: 7px;
   align-items: center;
   justify-content: center;
   transition: all 0.5s ease;
@@ -339,27 +343,28 @@ ul {
 }
 
 .home-apps .app-item img {
-  max-width: 50px;
+  max-width: 35px;
   min-width: 30px;
   widows: 100%;
   padding: 5px;
 }
 .home-apps .app-item .text-app {
   color: #fff;
-  margin-left: 10px;
+  margin-left: 3px;
 }
 .home-apps .app-item .text-app span {
-  font-size: 12px;
+  font-size: 9px;
   font-weight: 300;
   color: #fff;
 }
 .home-apps .app-item .text-app h3 {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 600;
+  word-spacing: -2px;
 }
 
 .home-img img {
-  max-width: 355px;
+  max-width: 460px;
   width: 100%;
   /* box-shadow: var(--shadow-black-100); */
   border-radius: 32px;
@@ -375,8 +380,8 @@ ul {
   background: linear-gradient(to top left, var(--main-color-2), #07e2b7);
 
   /* z-index: 1; */
-  height: 420px;
-  width: 420px;
+  height: 550px;
+  width: 550px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   top: 40%;
@@ -398,7 +403,7 @@ ul {
   animation: spin_01 10s linear infinite;
 }*/
 
-/* ------------ PRODUCTS ---------------- */
+/* ------------ PRODUCTS SECTION ---------------- */
 .products {
   min-height: 80vh;
   padding: 150px 0;
@@ -448,4 +453,90 @@ ul {
 
 .products-list .col-sm {
   margin-bottom: 10px;
+}
+
+/* ----------- MARKETING SECTION --------------  */
+
+.marketing {
+  min-height: 80vh;
+  padding: 150px 0;
+  background-color: var(--main-to-dark-color);
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+}
+
+.marketing-text h1 {
+  font-size: 35px;
+  font-weight: 740;
+  color: var(--color-titulo-1);
+  position: relative;
+}
+
+.marketing-text h2 {
+  margin: 20px 0 40px 0;
+  font-size: 28px;
+  font-weight: 700;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(#fc774f, #d96041);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.marketing-apps div > span {
+  color: var(--black-200);
+  font-size: 15px;
+}
+
+.marketing-apps .apps .app:not(:first-child) {
+  margin-left: 10px;
+}
+
+.marketing-apps .app-item {
+  background-color: var(--black-900);
+  padding: 0px 10px;
+  display: flex;
+  margin: 0;
+  border-radius: 7px;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+
+.marketing-apps .app-item:hover {
+  transform: scale(1.07);
+  box-shadow: var(--shadow-black-300);
+}
+
+.marketing-apps .app-item img {
+  max-width: 35px;
+  min-width: 30px;
+  widows: 100%;
+  padding: 5px;
+}
+.marketing-apps .app-item .text-app {
+  color: #fff;
+  margin-left: 3px;
+}
+.marketing-apps .app-item .text-app span {
+  font-size: 9px;
+  font-weight: 300;
+  color: #fff;
+}
+.marketing-apps .app-item .text-app h3 {
+  font-size: 15px;
+  font-weight: 600;
+  word-spacing: -2px;
+}
+
+.marketing img {
+  max-width: 1000px;
+  width: 100%;
+  /* box-shadow: var(--shadow-black-100); */
+}
+.marketing-img {
+  position: relative;
+  margin-left: 50px;
+  transform: translateX(-10%);
+  animation: bounceTop_01 3s ease infinite;
 }
