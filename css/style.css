@@ -412,10 +412,6 @@ ul {
   background-position: center;
 }
 
-.products .products-title {
-  /* padding-right: 30px; */
-}
-
 .products-text h2 {
   font-size: 40px;
   font-weight: 740;
@@ -434,22 +430,14 @@ ul {
 
 .products-list {
   display: flex;
-}
-/*
-.products-list .product-item {
-  background-color: #00a597;
-}
-*/
-.products-list .product-item img {
-  /* width: 100%; */
-  width: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+  height: 450px;
+  width: 450px;
+  transition: all 1s ease;
 }
 
-.products-list .col-sm {
-  margin-bottom: 10px;
+.products-list img:hover {
+  transform: scale(1.07);
+  filter: brightness(1.25);
 }
 
 /* ----------- MARKETING SECTION --------------  */
