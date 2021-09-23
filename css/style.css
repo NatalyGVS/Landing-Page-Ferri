@@ -252,8 +252,7 @@ section .container-fluid {
   font-weight: 740;
   color: var(--color-titulo-1);
   position: relative;
-
-  /* margin: 0 0 5px; */
+  margin-bottom: 0px;
 }
 .home-text h2 span {
   position: absolute;
@@ -276,6 +275,8 @@ section .container-fluid {
   background: #fff;
   mix-blend-mode: multiply;
   position: relative;
+  margin-top: 0px;
+  transform: translateY(-5px);
 }
 
 .home-text h1::before {
@@ -294,7 +295,7 @@ section .container-fluid {
   color: var(--black-700);
 
   line-height: 28px;
-  margin: 20px 0;
+  margin: 0 0 20px 0;
   font-weight: 300;
 }
 
