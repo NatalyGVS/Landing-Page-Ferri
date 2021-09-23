@@ -23,6 +23,8 @@
   --black-900: #000000;
   --black-700: #3c3c3c;
   --black-400: #555555;
+  --black-200: #808080;
+
   --black-100: #f7f7f7;
   --black-000: #ffffff;
   --black-alpha-100: rgba(0, 0, 0, 0.05);
@@ -58,13 +60,16 @@ ul {
   transition: all 0.5s ease;
   box-shadow: var(--shadow-black-100);
   font-weight: 600;
+  color: #fff;
 }
 .btn-1:focus {
   box-shadow: var(--shadow-black-300);
+  color: #fff;
 }
 .btn-1:hover {
+  transform: scale(1.07);
   color: #fff;
-  background-color: var(--main-color-1);
+  box-shadow: var(--shadow-black-300);
 }
 
 .btn-2 {
@@ -245,14 +250,15 @@ section .container-fluid {
   overflow-x: hidden;
 }
 .home .home-content {
-  margin-right: 10px;
+  margin-right: 45px;
 }
 .home-text h2 {
   font-size: 45px;
   font-weight: 740;
   color: var(--color-titulo-1);
   position: relative;
-  margin-bottom: 0px;
+
+  /* margin: 0 0 5px; */
 }
 .home-text h2 span {
   position: absolute;
@@ -263,7 +269,6 @@ section .container-fluid {
   font-weight: 750;
   color: var(--color-titulo-1);
   transform: translate(-35px, -25px);
-
   /* margin: 0 0 5px; */
 }
 
@@ -275,8 +280,6 @@ section .container-fluid {
   background: #fff;
   mix-blend-mode: multiply;
   position: relative;
-  margin-top: 0px;
-  transform: translateY(-5px);
 }
 
 .home-text h1::before {
@@ -292,19 +295,20 @@ section .container-fluid {
 }
 .home-text p {
   font-size: 18px;
-  color: var(--black-700);
-
+  color: var(--black-200);
   line-height: 28px;
-  margin: 0 0 20px 0;
+  margin: 20px 0;
   font-weight: 300;
 }
 
 .home-text span {
-  /* font-family: "Raleway", sans-serif; */
   margin: 35px 0;
   display: block;
   font-size: 30px;
-  font-weight: 10;
+  font-weight: 3000;
+  font-style: italic;
+  word-spacing: 5px;
+  color: var(--black-200);
 }
 
 .home-apps {
@@ -324,7 +328,14 @@ section .container-fluid {
   border-radius: 10px;
   align-items: center;
   justify-content: center;
+  transition: all 0.5s ease;
 }
+
+.home-apps .app-item:hover {
+  transform: scale(1.07);
+  box-shadow: var(--shadow-black-300);
+}
+
 .home-apps .app-item img {
   max-width: 50px;
   min-width: 30px;
@@ -382,5 +393,3 @@ section .container-fluid {
   transform-origin: 170px 170px;
   animation: spin_01 10s linear infinite;
 }
-
-/* <img src="img/section-home/1.png" alt="ferri"> */
