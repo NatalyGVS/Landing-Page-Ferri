@@ -582,7 +582,7 @@ ul {
 
 /* ----------- FOOTER SECTION --------------  */
 .footer {
-  /* min-height: 80vh; */
+  /* min-height: 800vh; */
   padding: 30px 0 60px 0;
   background-color: var(--main-to-dark-color);
   position: relative;
@@ -616,9 +616,11 @@ ul {
   margin: 0;
   padding-left: 0;
 }
-.footer-col ul li:not(:last-child) {
-  margin-bottom: 10px;
+
+.footer-col ul li {
+  margin-bottom: 0;
 }
+
 .footer-col ul li a {
   font-size: 18px;
   color: var(--black-200);
