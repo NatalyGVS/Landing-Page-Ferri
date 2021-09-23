@@ -6,6 +6,7 @@
 :root {
   --main-color-1: #f0f0f0;
   --main-color-2: #13a88c;
+  --main-color-3: #d2e9e5;
 
   --color-titulo-1: #13a88c;
   --color-titulo-2: #dc6242; /* es degradado */
@@ -62,34 +63,30 @@ ul {
   font-weight: 600;
   color: #fff;
 }
-.btn-1:focus {
+.btn-2 {
+  background: linear-gradient(to top, #d65f40, #fe784f);
+  padding: 8px 20px;
+  border: none;
+  border-radius: 15px;
+  color: var(--main-color-1);
+  font-size: 16px;
+  /* text-transform: capitalize; */
+  transition: all 0.5s ease;
+  box-shadow: var(--shadow-black-100);
+  font-weight: 600;
+  color: #fff;
+}
+
+.btn-1:focus,
+.btn-2:focus {
   box-shadow: var(--shadow-black-300);
   color: #fff;
 }
-.btn-1:hover {
+.btn-1:hover,
+.btn-2:hover {
   transform: scale(1.07);
   color: #fff;
   box-shadow: var(--shadow-black-300);
-}
-
-.btn-2 {
-  background-color: var(--main-color-1);
-  padding: 12px 30px;
-  border: none;
-  border-radius: 30px;
-  color: #fff;
-  font-size: 16px;
-  text-transform: capitalize;
-  transition: all 0.5s ease;
-  box-shadow: var(--shadow-black-100);
-  font-weight: 500;
-}
-.btn-2:focus {
-  box-shadow: var(--shadow-black-100);
-}
-.btn-2:hover {
-  color: var(--main-color-1);
-  background-color: #fff;
 }
 
 @keyframes spin_01 {
@@ -191,6 +188,9 @@ ul {
 
 .products .contenedor-products {
   margin: 0 10vw;
+}
+.allies .container-fluid {
+  margin: 0;
 }
 
 /* ------------ NAVBAR ---------------- */
@@ -539,4 +539,46 @@ ul {
   margin-left: 50px;
   transform: translateX(-10%);
   animation: bounceTop_01 3s ease infinite;
+}
+
+/* ----------- ALLIES SECTION --------------  */
+.allies-header {
+  background-color: var(--main-color-3);
+  padding: 8px;
+  display: block;
+}
+
+.allies-header h1 {
+  font-size: 35px;
+  font-weight: 740;
+  color: var(--color-titulo-1);
+  position: relative;
+}
+.allies-content {
+  width: 100vw;
+  /* justify-content: center; */
+  text-align: center;
+}
+
+.allies-content .images-allies {
+  margin: 35px 0;
+}
+.allies-content .images-allies img {
+  max-width: 10vw;
+  widows: 100%;
+  padding: 5px;
+  transition: all 0.5s ease;
+  filter: grayscale(100%);
+}
+.allies-content .images-allies img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.2);
+}
+
+.allies-text h1 {
+  font-size: 35px;
+  font-weight: 740;
+  color: var(--color-titulo-1);
+  position: relative;
+  margin: 35px 0;
 }
