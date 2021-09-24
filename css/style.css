@@ -259,10 +259,8 @@ ul {
   font-weight: 740;
   color: var(--color-titulo-1);
   position: relative;
-
-  /* margin: 0 0 5px; */
 }
-.home-text h2 span {
+.home-text h2 span.mas {
   position: absolute;
   left: 0;
   top: 0;
@@ -278,23 +276,11 @@ ul {
   font-size: 60px;
   display: inline-block;
   font-weight: 950;
-  color: #000;
-  background: #fff;
-  mix-blend-mode: multiply;
-  position: relative;
+  background: linear-gradient(#08ebbe, var(--main-color-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.home-text h1::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, var(--main-color-2), #15ffd0);
-  mix-blend-mode: screen;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 .home-text p {
   font-size: 20px;
   color: var(--black-200);
@@ -332,6 +318,7 @@ ul {
   align-items: center;
   justify-content: center;
   transition: all 0.5s ease;
+  float: left;
 }
 
 .home-apps .app-item:hover {
@@ -361,7 +348,7 @@ ul {
 }
 
 .home-img img {
-  max-width: 460px;
+  max-width: 600px;
   width: 100%;
   /* box-shadow: var(--shadow-black-100); */
   border-radius: 32px;
@@ -385,25 +372,11 @@ ul {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-/*s
-.home-img .circle::after {
-  content: "";
-  position: absolute;
-  height: 60px;
-  width: 60px;
-  background-color: rgba(255, 255, 255, 0.4);
-  background-color: red;
-  border-radius: 50%;
-  top: 20px;
-  left: 20px;
-  transform-origin: 170px 170px;
-  animation: spin_01 10s linear infinite;
-}*/
 
 /* ------------ PRODUCTS SECTION ---------------- */
 .products {
-  min-height: 80vh;
-  padding: 150px 0;
+  min-height: 70vh;
+  padding: 120px 0;
   background: url(../img/section-products/bg.png) no-repeat;
   position: relative;
   z-index: 1;
@@ -411,7 +384,9 @@ ul {
   background-size: cover;
   background-position: center;
 }
-
+.products-title {
+  text-align: left;
+}
 .products-text h2 {
   font-size: 40px;
   font-weight: 740;
@@ -541,19 +516,24 @@ ul {
 }
 .allies-content {
   width: 100vw;
-  /* justify-content: center; */
   text-align: center;
 }
 
 .allies-content .images-allies {
   margin: 35px 0;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
 }
 .allies-content .images-allies img {
   max-width: 10vw;
-  widows: 100%;
+  min-width: 10vw;
+  /* widows: 100%; */
   padding: 5px;
   transition: all 0.5s ease;
   filter: grayscale(100%);
+  display: block;
 }
 .allies-content .images-allies img:hover {
   filter: grayscale(0%);
@@ -620,4 +600,348 @@ ul {
 }
 .footer-col ul li a:hover {
   padding-left: 7px;
+}
+
+/* ------------ MEDIA QUERIES ---------------- */
+
+@media (max-width: 1380px) {
+  /* ---------
+  HOME SECTION
+  ------------- */
+  .home-img .circle {
+    height: 470px;
+    width: 470px;
+    transition: all 1s ease;
+  }
+  .home-text h2 {
+    font-size: 3.3vw;
+  }
+}
+
+@media (max-width: 1285px) {
+  /* ---------
+  HOME SECTION
+  ------------- */
+  .home-text h2 {
+    font-size: 3.3vw;
+  }
+
+  .home-text h1 {
+    font-size: 4vw;
+  }
+  .home-text p {
+    font-size: 2vw;
+  }
+
+  .home-text span {
+    font-size: 20px;
+  }
+
+  .home-img .circle {
+    height: 380px;
+    width: 380px;
+    transition: all 1s ease;
+  }
+  /* ---------
+  PRODUCTS SECTION
+  ------------- */
+
+  .products {
+    min-height: 40vh;
+    padding: 70px 0;
+  }
+
+  .products-list {
+    height: 400px;
+    width: 400px;
+    transition: all 1s ease;
+  }
+
+  /* ---------
+  MARKETING SECTION
+  ------------- */
+  .marketing-apps .apps {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* transform: scale(1.07); */
+  }
+
+  /* ---------
+  ALLIES SECTION
+  ------------- */
+
+  .allies-content .images-allies {
+    margin: 35px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .allies-content .images-allies img {
+    max-width: 180px;
+    min-width: 100px;
+  }
+}
+@media (max-width: 1100px) {
+  /* ---------
+  HOME SECTION
+  ------------- */
+  .home-text h2 {
+    font-size: 2.8vw;
+  }
+  .home-img .circle {
+    height: 330px;
+    width: 330px;
+    transition: all 1s ease;
+  }
+  .home-apps .apps {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ---------
+  PADDING SECTION
+  ------------- */
+  .footer-col {
+    padding-left: 70px;
+  }
+}
+
+@media (max-width: 991px) {
+  /* ---------
+  HOME SECTION
+  ------------- */
+  .home {
+    min-height: 70vh;
+    transition: all 1s ease;
+  }
+  .home .home-content {
+    margin-right: 0px;
+  }
+  .home-text h2 {
+    font-size: 3.1vw;
+  }
+
+  .home-text h1 {
+    font-size: 4.4vw;
+  }
+  .home-text p {
+    font-size: 1.8vw;
+  }
+
+  .home-text span {
+    font-size: 20px;
+  }
+
+  .home-img .circle {
+    height: 300px;
+    width: 300px;
+    transition: all 1s ease;
+  }
+
+  /* ---------
+  PRODCUTS SECTION
+  ------------- */
+  .products-list {
+    height: 350px;
+    width: 350px;
+    transition: all 1s ease;
+  }
+
+  /* ---------
+  MARKETING SECTION
+  ------------- */
+  .marketing {
+    min-height: 70vh;
+    padding: 120px 0;
+    transition: all 1s ease;
+  }
+
+  .marketing-text h1 {
+    font-size: 30px;
+  }
+  .marketing-text h2 {
+    font-size: 24px;
+  }
+  /* ---------
+  ALLIES SECTION
+  ------------- */
+
+  .home-apps .apps {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ---------
+  FOOTER SECTION
+  ------------- */
+  .footer-col {
+    padding-left: 50px;
+  }
+}
+@media (max-width: 850px) {
+  /* ---------
+  MARKETING SECTION
+  ------------- */
+  .marketing {
+    min-height: 48vh;
+    padding: 80px 0;
+    transition: all 1s ease;
+  }
+
+  .marketing-text h1 {
+    font-size: 25px;
+  }
+  .marketing-text h2 {
+    font-size: 24px;
+  }
+  /* ---------
+  ALLIES SECTION
+  ------------- */
+  .allies-content .images-allies img {
+    max-width: 150px;
+    min-width: 80px;
+  }
+  /* ---------
+  FOOTER SECTION
+  ------------- */
+  .footer-col {
+    padding-left: 20px;
+  }
+}
+@media (max-width: 767px) {
+  /* ---------
+  HOME SECTION
+  ------------- */
+
+  .home-content {
+    margin-bottom: 50px;
+  }
+  .home-text h2 {
+    font-size: 5vw;
+  }
+
+  .home-text h1 {
+    font-size: 6.5vw;
+  }
+  .home-text p {
+    font-size: 3vw;
+  }
+
+  .home-text span {
+    font-size: 20px;
+  }
+
+  .home-img img {
+    max-width: 95vw;
+    /* box-shadow: var(--shadow-black-100); */
+    border-radius: 32px;
+    animation: bounceTop_01 3s ease infinite;
+  }
+
+  .home-img {
+    width: 50vw;
+  }
+
+  /* ---------
+  PRODUCTS SECTION
+  ------------- */
+  .products-title {
+    text-align: center;
+  }
+
+  .products-list {
+    height: 500px;
+    width: 500px;
+    transition: all 1s ease;
+  }
+
+  /* ---------
+  MARKETING SECTION
+  ------------- */
+
+  .marketing-text h1 {
+    font-size: 35px;
+  }
+  .marketing-text h2 {
+    font-size: 28px;
+  }
+  .marketing .marketing-text {
+    text-align: center;
+  }
+
+  /* ---------
+  FOOTER SECTION
+  ------------- */
+  .footer-col {
+    padding-left: 0px;
+    text-align: center;
+  }
+  .footer-col ul li a:hover {
+    padding-left: 0px;
+    font-weight: 600;
+  }
+  .footer img {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 575px) {
+  /* ---------
+  PRODUCTS SECTION
+  ------------- */
+  .products-list {
+    height: auto;
+    width: auto;
+    transition: all 1s ease;
+  }
+  .products-list > div {
+    margin-bottom: 15px;
+  }
+  .products-list img {
+    min-width: 10vw;
+    max-width: 25vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .products-list img:hover {
+    transform: scale(1);
+    filter: brightness(1.25);
+  }
+  /* ---------
+  APPS SECTION
+  ------------- */
+
+  /* ---------
+  MARKETING SECTION
+  ------------- */
+  .marketing img {
+    max-width: 1000px;
+    width: 100%;
+    /* box-shadow: var(--shadow-black-100); */
+  }
+  .marketing-img {
+    position: relative;
+    margin-left: 60px;
+    transform: translateX(-10%);
+    animation: bounceTop_01 3s ease infinite;
+  }
+}
+
+@media (max-width: 500px) {
+  .home-text h2 {
+    font-size: 30px;
+  }
+
+  .home-img .circle {
+    height: 200px;
+    width: 200px;
+    transform: translate(-50%, -50%);
+  }
 }
