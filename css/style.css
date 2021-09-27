@@ -187,7 +187,7 @@ ul {
 /* ----------- HOME SECTION --------------  */
 .home {
   min-height: 70vh;
-  padding: 90px 0;
+  padding: 140px 0 50px 0;
   background-color: var(--main-color-1);
   position: relative;
   z-index: 1;
@@ -295,7 +295,7 @@ ul {
 
 .home-img img {
   max-width: 600px;
-  width: 100%;
+  width: 90%;
   /* box-shadow: var(--shadow-black-100); */
   border-radius: 32px;
   animation: bounceTop_01 3s ease infinite;
@@ -311,7 +311,7 @@ ul {
   width: 600px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
-  top: 40%;
+  top: 46%;
   left: 50%;
   transform: translate(-50%, -40%);
 }
@@ -503,7 +503,7 @@ ul {
 .contact {
   /* background-color: var(--black-100); */
   background-color: var(--main-color-3);
-  padding: 130px 10vw;
+  padding: 100px 10vw;
 }
 
 .section-title h2 {
@@ -524,14 +524,14 @@ ul {
   padding-left: 55px;
   margin-bottom: 30px;
 }
-.contact-info-item i {
+.contact-info-item svg {
   position: absolute;
   left: 0;
   top: 0;
-  height: 40px;
+  /* height: 40px; */
   width: 40px;
   border-radius: 50%;
-  font-size: 16px;
+  /* font-size: 16px; */
   color: var(--main-color);
   border: 1px solid var(--main-color);
   text-align: center;
