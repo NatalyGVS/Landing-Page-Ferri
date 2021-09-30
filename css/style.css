@@ -55,9 +55,9 @@ ul {
   border: none;
   border-radius: 15px;
   color: var(--main-color-1);
-  font-size: 16px;
+  font-size: 20px;
   /* text-transform: capitalize; */
-  transition: all 0.5s ease;
+  transition: all 0.08s ease;
   box-shadow: var(--shadow-black-100);
   font-weight: 600;
   color: #fff;
@@ -70,7 +70,9 @@ ul {
 }
 .btn-1:hover,
 .btn-2:hover {
+  -webkit-transform: scale(1.07);
   transform: scale(1.07);
+
   color: #fff;
   box-shadow: var(--shadow-black-300);
 }
@@ -119,18 +121,17 @@ ul {
 .owl-carousel button.owl-dot.active {
   background-color: var(--main-color-1);
 }
-
+.navbar .container-fluid,
 .home .container-fluid,
-.marketing .container-fluid {
+.marketing .container-fluid,
+.allies .container-fluid .allies-body,
+.products .container-fluid {
   margin: 0 10vw;
 }
-
-.products .contenedor-products {
-  margin: 0 10vw;
-}
+/*
 .allies .container-fluid {
   margin: 0;
-}
+}*/
 
 /* ------------ NAVBAR ---------------- */
 .navbar {
@@ -145,13 +146,13 @@ ul {
   /* background-color: var(--main-color-2); */
   padding: 10px 0;
 }
-
+/*
 .navbar > .container {
-  padding: 0 15px;
-}
+   padding: 0 15px; 
+}*/
 .navbar-brand {
   display: inline-block;
-  margin: 0 0 0 80px;
+  margin: 0;
 }
 .navbar img {
   max-width: 120px;
@@ -163,7 +164,7 @@ ul {
 .navbar .nav-item .nav-link {
   color: var(--color-titulo-1);
   text-transform: capitalize;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   padding: 5px 0;
   position: relative;
@@ -202,7 +203,7 @@ ul {
 }
 .home-title h2 {
   font-size: 50px;
-  font-weight: 740;
+  font-weight: 700;
   color: var(--color-titulo-1);
   position: relative;
 }
@@ -221,7 +222,7 @@ ul {
 .home-title .h1 {
   display: block;
   font-size: 58px;
-  font-weight: 950;
+  font-weight: 700;
   background: linear-gradient(#08ebbe, var(--main-color-2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -233,7 +234,7 @@ ul {
   line-height: 28px;
   margin: 20px 0;
   font-weight: 300;
-  word-spacing: 12px;
+  /* word-spacing: 7px; */
 }
 
 .home-text span {
@@ -245,7 +246,9 @@ ul {
   word-spacing: 5px;
   color: var(--black-200);
 }
-
+.home-apps > div:first-child {
+  margin-bottom: 15px;
+}
 .home-apps div > span {
   color: var(--black-200);
   font-size: 20px;
@@ -254,8 +257,14 @@ ul {
 .home-apps .apps .app:not(:first-child) {
   margin-left: 10px;
 }
+.home-apps .apps {
+  display: flex;
+  /* flex-direction: column; */
+}
 
 .home-apps .app-item {
+  /* width: 200px; */
+
   background-color: var(--black-900);
   padding: 0px 10px;
   display: flex;
@@ -263,12 +272,14 @@ ul {
   border-radius: 7px;
   align-items: center;
   justify-content: center;
-  transition: all 0.5s ease;
+  /* transition: all 0.3s linear; */
   float: left;
 }
 
 .home-apps .app-item:hover {
+  -webkit-transform: scale(1.07);
   transform: scale(1.07);
+
   box-shadow: var(--shadow-black-300);
 }
 
@@ -323,6 +334,8 @@ ul {
   background: url(../img/section-products/bg.png) no-repeat;
   position: relative;
   z-index: 1;
+  overflow-x: hidden;
+
   justify-content: center;
   background-size: cover;
   background-position: center;
@@ -332,14 +345,14 @@ ul {
 }
 .products-text h2 {
   font-size: 40px;
-  font-weight: 740;
+  font-weight: 700;
   color: var(--color-titulo-1);
   position: relative;
 }
 
 .products-text h2 span {
   font-size: 40px;
-  font-weight: 740;
+  font-weight: 700;
   background: rgb(255, 255, 255);
   background: linear-gradient(#f79375, #d96041);
   -webkit-background-clip: text;
@@ -352,11 +365,93 @@ ul {
   width: 450px;
   transition: all 1s ease;
 }
-
+/*
 .products-list img:hover {
   transform: scale(1.07);
   filter: brightness(1.25);
   transition: all 0.5s ease;
+}
+*/
+
+/* Flipping cards */
+.container .box {
+  position: relative;
+  height: 130px;
+  width: 130px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.container .box .body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 0.9s ease;
+}
+
+.container .box .body .imgContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.container .box .body .imgContainer img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container .box .body .content {
+  border-radius: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--black-700);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+}
+
+.container .box:hover .body {
+  transform: rotateY(180deg);
+}
+
+.container .box:hover .body .content div {
+  opacity: 1;
+  z-index: 10000;
+}
+
+.container .box .body .content div {
+  opacity: 0;
+  transition: all 0.5s ease;
+
+  transform-style: preserve-3d;
+  padding: 20px;
+  transform: translateZ(100px);
+}
+
+.container .box .body .content div.orange {
+  background-color: #fa7a51;
+}
+.container .box .body .content div.green {
+  background-color: #00a597;
+}
+
+.container .box .body .content div h3 {
+  /* letter-spacing: 1px; */
+  font-size: 20px;
 }
 
 /* ----------- MARKETING SECTION --------------  */
@@ -372,19 +467,23 @@ ul {
 
 .marketing-text h1 {
   font-size: 35px;
-  font-weight: 740;
+  font-weight: 700;
   color: var(--color-titulo-1);
   position: relative;
 }
 
 .marketing-text h2 {
   margin: 20px 0 40px 0;
-  font-size: 28px;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 600;
   background: rgb(255, 255, 255);
   background: linear-gradient(#fc774f, #d96041);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.marketing-apps > div:first-child {
+  margin-bottom: 15px;
 }
 
 .marketing-apps div > span {
@@ -396,6 +495,10 @@ ul {
   margin-left: 10px;
 }
 
+.marketing-apps .apps {
+  display: flex;
+}
+
 .marketing-apps .app-item {
   background-color: var(--black-900);
   padding: 0px 10px;
@@ -404,7 +507,7 @@ ul {
   border-radius: 7px;
   align-items: center;
   justify-content: center;
-  transition: all 0.5s ease;
+  /* transition: all 0.5s ease; */
 }
 
 .marketing-apps .app-item:hover {
@@ -451,6 +554,7 @@ ul {
   min-height: 500px;
   background-color: var(--main-color-1);
   padding: 10px 0;
+  overflow-x: hidden;
 }
 
 .allies-header {
@@ -460,40 +564,50 @@ ul {
 }
 
 .allies-header h1 {
-  font-size: 35px;
-  font-weight: 740;
+  font-size: 40px;
+  font-weight: 700;
   color: var(--color-titulo-1);
   position: relative;
 }
+/*
 .allies-content {
   width: 100vw;
   text-align: center;
-}
+}*/
 
 .allies-content .images-allies {
   margin: 35px 0;
   display: flex;
-  flex-wrap: nowrap;
+  /* flex-wrap: nowrap; */
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
-.allies-content .images-allies img {
-  max-width: 10vw;
-  min-width: 10vw;
-  /* widows: 100%; */
+
+.allies-content .image-container {
+  padding: 10px;
+  /* height: 100px; */
+  width: 150px;
+  /* min-width: 10vw; */
+}
+
+.allies-content .images-allies .image-container img {
+  width: 100%;
+  /* height: 100%; */
   padding: 5px;
   transition: all 0.5s ease;
   filter: grayscale(100%);
   display: block;
 }
+
 .allies-content .images-allies img:hover {
   filter: grayscale(0%);
   transform: scale(1.2);
 }
 
 .allies-text h1 {
-  font-size: 35px;
-  font-weight: 740;
+  font-size: 40px;
+  font-weight: 700;
   color: var(--color-titulo-1);
   position: relative;
   margin: 35px 0;
@@ -544,8 +658,9 @@ ul {
   color: var(--black-900);
 }
 .contact-info-item p {
+  /* font-style: italic; */
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 500;
   margin: 0;
   line-height: 26px;
   color: var(--black-400);
@@ -749,6 +864,10 @@ ul {
     width: 400px;
     transition: all 1s ease;
   }
+  .container .box {
+    height: 120px;
+    width: 120px;
+  }
 
   /* ---------
   MARKETING SECTION
@@ -761,22 +880,6 @@ ul {
   }
 
   /* ---------
-  ALLIES SECTION
-  ------------- */
-
-  .allies-content .images-allies {
-    margin: 35px 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .allies-content .images-allies img {
-    max-width: 180px;
-    min-width: 100px;
-  }
-  /* ---------
   CONTACT SECTION
   ------------- */
   .contact {
@@ -785,12 +888,11 @@ ul {
 }
 
 @media (max-width: 1102px) {
+  .navbar .container-fluid,
   .home .container-fluid,
-  .marketing .container-fluid {
-    margin: 0 7.5vw;
-  }
-
-  .products .contenedor-products {
+  .marketing .container-fluid,
+  .allies .container-fluid .allies-body,
+  .products .container-fluid {
     margin: 0 7.5vw;
   }
 
@@ -827,12 +929,11 @@ ul {
 }
 
 @media (max-width: 991px) {
+  .navbar .container-fluid,
   .home .container-fluid,
-  .marketing .container-fluid {
-    margin: 0 5vw;
-  }
-
-  .products .contenedor-products {
+  .marketing .container-fluid,
+  .allies .container-fluid .allies-body,
+  .products .container-fluid {
     margin: 0 5vw;
   }
 
@@ -872,6 +973,10 @@ ul {
     height: 350px;
     width: 350px;
     transition: all 1s ease;
+  }
+  .container .box {
+    height: 100px;
+    width: 100px;
   }
 
   /* ---------
@@ -959,13 +1064,7 @@ ul {
   .marketing-text h2 {
     font-size: 24px;
   }
-  /* ---------
-  ALLIES SECTION
-  ------------- */
-  .allies-content .images-allies img {
-    max-width: 150px;
-    min-width: 80px;
-  }
+
   /* ---------
   FOOTER SECTION
   ------------- */
@@ -974,12 +1073,11 @@ ul {
   }
 }
 @media (max-width: 767px) {
+  .navbar .container-fluid,
   .home .container-fluid,
-  .marketing .container-fluid {
-    margin: 0 8vw;
-  }
-
-  .products .contenedor-products {
+  .marketing .container-fluid,
+  .allies .container-fluid .allies-body,
+  .products .container-fluid {
     margin: 0 8vw;
   }
 
@@ -1054,6 +1152,7 @@ ul {
     /* box-shadow: var(--shadow-black-100); */
     border-radius: 32px;
     animation: bounceTop_01 3s ease infinite;
+    margin-bottom: 100px;
   }
 
   .home-img {
@@ -1071,7 +1170,15 @@ ul {
   .products-list {
     height: 500px;
     width: 500px;
-    transition: all 1s ease;
+    margin: 0 auto !important;
+  }
+  .container .box {
+    height: 150px;
+    width: 150px;
+  }
+
+  .products .container-fluid {
+    text-align: center;
   }
 
   /* ---------
@@ -1115,6 +1222,23 @@ ul {
 
 @media (max-width: 575px) {
   /* ---------
+  HOME SECTION
+  ------------- */
+
+  .home-text p,
+  .home-text span {
+    word-spacing: 0px;
+  }
+
+  .home-img img {
+    max-width: 95vw;
+    /* box-shadow: var(--shadow-black-100); */
+    border-radius: 32px;
+    animation: bounceTop_01 3s ease infinite;
+    margin-bottom: 70px;
+  }
+
+  /* ---------
   PRODUCTS SECTION
   ------------- */
   .products-list {
@@ -1125,21 +1249,6 @@ ul {
   .products-list > div {
     margin-bottom: 15px;
   }
-  .products-list img {
-    min-width: 10vw;
-    max-width: 25vw;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-
-  .products-list img:hover {
-    transform: scale(1);
-    filter: brightness(1.25);
-  }
-  /* ---------
-  APPS SECTION
-  ------------- */
 
   /* ---------
   MARKETING SECTION
@@ -1169,6 +1278,23 @@ ul {
     height: 200px;
     width: 200px;
     transform: translate(-50%, -50%);
+  }
+
+  /* ---------
+  home y marketing SECTION
+  ------------- */
+
+  .marketing-apps .apps,
+  .home-apps .apps {
+    flex-direction: column;
+  }
+  .marketing-apps .app-item,
+  .home-apps .app-item {
+    width: 200px;
+  }
+  .marketing-apps .apps .app:not(:first-child),
+  .home-apps .apps .app:not(:first-child) {
+    margin-left: 0px;
   }
 
   /* ---------

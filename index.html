@@ -21,7 +21,7 @@
 
     <!-- NAV VAR START -->
     <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
+        <div class="container-fluid">
             <a class="navbar-brand" href="#index.html">
                 <img src="img/logo.png" alt="ferri logo">
             </a>
@@ -30,7 +30,7 @@
                 <i class="fas fa-bars"></i>
 
             </button>
-            <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavBar">
+            <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavBar">
                 <ul class="mb-2 ml-auto navbar-nav mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" data-scroll-nav="0" href="#">Home</a>
@@ -58,7 +58,6 @@
 
     <!-- HOME SECTION START -->
     <section id="home" class="home d-flex align-items-center" data-scroll-index="0">
-
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-12 col-sm-12 col-md-7">
@@ -82,10 +81,6 @@
                                     Accede a la aplicación web
                                 </button>
                             </div>
-                            <!-- <button type="button" class="btn btn-1">
-                                Accede a la aplicación web
-                            </button> -->
-
                             <span>
                                 Peruanos ayudando a más peruanos a surtir tu ferretería...
                             </span>
@@ -95,7 +90,7 @@
                                 <span class="my-2 d-block">Disponible gratis en </span>
 
                             </div>
-                            <div class="apps d-flex">
+                            <div class="apps">
                                 <div class="mb-2 app ">
                                     <div class="mx-auto app-item">
                                         <img src="img/apps-logos/google-play.png" alt="Google Play">
@@ -131,7 +126,7 @@
                     </div>
                 </div>
                 <div class="p-0 text-center col-12 col-sm-12 col-md-5">
-                    <div class="home-img mx-auto">
+                    <div class="mx-auto home-img">
                         <div class="circle">
                         </div>
                         <img src="img/section-home/celulares.png" alt="shala app">
@@ -143,10 +138,11 @@
 
     <!-- PRODUCTS SECTION END -->
 
-    <section id="products" class="products" data-scroll-index="1">
-        <div class="contenedor-products">
+    <section id="products" class="products d-flex align-items-center" data-scroll-index="0">
+        <div class="container-fluid">
             <div class="row align-items-center">
-                <div class="mb-4 col-12 col-md-6 products-title">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+
                     <div class="products-text">
                         <h2> Variedades de productos
                             <span>para tu ferretería... </span>
@@ -157,51 +153,153 @@
                         </button>
                     </div>
                 </div>
+                <div class="p-0 text-center col-12 col-sm-12 col-md-6 col-lg-6">
 
-                <div class="col-12 col-md-6 ">
+                    <div
+                        class="container flex-wrap p-0 m-0 products-list row d-flex align-items-center justify-content-center">
+                        <div class="p-2 col col-xs-6 col-sm-4">
+                            <div class="mx-auto box">
+                                <div class="body">
+                                    <div class="imgContainer">
+                                        <img src="img/section-products/1-herramientas.png" alt="Herramientas">
+                                    </div>
+                                    <div class="content d-flex flex-column align-items-center justify-content-center">
+                                        <div class="orange">
+                                            <h3 class="text-white">Herramientas</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2 col col-xs-6 col-sm-4">
+                            <div class="mx-auto box">
+                                <div class="body">
+                                    <div class="imgContainer">
+                                        <img src="img/section-products/2-griferia.png" alt="Grifería">
+                                    </div>
+                                    <div class="content d-flex flex-column align-items-center justify-content-center">
+                                        <div class="green">
+                                            <h3 class="text-white">Grifería</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2 col col-xs-6 col-sm-4">
+                            <div class="mx-auto box">
+                                <div class="body">
+                                    <div class="imgContainer">
+                                        <img src="img/section-products/3-perneria.png" alt="Pernería">
+                                    </div>
+                                    <div class="content d-flex flex-column align-items-center justify-content-center">
+                                        <div class="orange">
+                                            <h3 class="text-white ">Pernería</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2 col col-xs-6 col-sm-4">
+                            <div class="mx-auto box">
+                                <div class="body">
+                                    <div class="imgContainer">
+                                        <img src="img/section-products/4-perneria.png" alt="Pernería">
+                                    </div>
+                                    <div class="content d-flex flex-column align-items-center justify-content-center">
+                                        <div class="green">
+                                            <h3 class="text-white fs-6">Pernería</h3>
 
-                    <div class="mx-auto products-list row">
-                        <div class="col-6 col-sm-4">
-                            <img src="img/section-products/1-herramientas.png" alt="Herramientas">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-6 col-sm-4">
-                            <img src="img/section-products/2-griferia.png" alt="Grifería">
+                        <div class="p-2 col col-xs-6 col-sm-4">
+                            <div class="mx-auto box">
+                                <div class="body">
+                                    <div class="imgContainer">
+                                        <img src="img/section-products/5-material-electrico.png"
+                                            alt="Material Eléctrico">
 
-                        </div>
-                        <div class="col-6 col-sm-4">
-                            <img src="img/section-products/3-perneria.png" alt="Pernería">
+                                    </div>
+                                    <div class="content d-flex flex-column align-items-center justify-content-center">
+                                        <div class="orange">
+                                            <h3 class="text-white fs-6">Material Eléctrico</h3>
 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-6 col-sm-4">
-                            <img src="img/section-products/4-perneria.png" alt="Pernería">
-                        </div>
-                        <div class="col-6 col-sm-4">
-                            <img src="img/section-products/5-material-electrico.png" alt="Material Eléctrico">
+                        <div class="p-2 col col-xs-6 col-sm-4">
+                            <div class="mx-auto box">
+                                <div class="body">
+                                    <div class="imgContainer">
+                                        <img src="img/section-products/6-material-contruccion.png"
+                                            alt="Material de Construcción">
+                                    </div>
+                                    <div class="content d-flex flex-column align-items-center justify-content-center">
+                                        <div class="green">
+                                            <h3 class="text-white fs-6">Material de Construcción</h3>
 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-6 col-sm-4">
-                            <img src="img/section-products/6-material-contruccion.png" alt="Material de Construcción">
+                        <div class="p-2 col col-xs-6 col-sm-4">
+                            <div class="mx-auto box">
+                                <div class="body">
+                                    <div class="imgContainer">
+                                        <img src="img/section-products/7-produccion-limpieza.png"
+                                            alt="Producción de Limpieza">
 
+                                    </div>
+                                    <div class="content d-flex flex-column align-items-center justify-content-center">
+                                        <div class="orange">
+                                            <h3 class="text-white fs-6">Productos de Limpieza</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-6 col-sm-4">
-                            <img src="img/section-products/7-produccion-limpieza.png" alt="Producción de Limpieza">
+                        <div class="p-2 col col-xs-6 col-sm-4">
+                            <div class="mx-auto box">
+                                <div class="body">
+                                    <div class="imgContainer">
+                                        <img src="img/section-products/8-articulos-seguridad.png"
+                                            alt="Artículos de Seguridad">
+                                    </div>
+                                    <div class="content d-flex flex-column align-items-center justify-content-center">
+                                        <div class="green">
+                                            <h3 class="text-white fs-6">Artículos de Seguridad</h3>
 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-6 col-sm-4">
-                            <img src="img/section-products/8-articulos-seguridad.png" alt="Artículos de Seguridad">
-                        </div>
-                        <div class="col-6 col-sm-4">
-                            <img src="img/section-products/9-ferreteria-sencilla.png" alt="Ferretería Sencilla">
-
+                        <div class="p-2 col col-xs-6 col-sm-4">
+                            <div class="mx-auto box">
+                                <div class="body">
+                                    <div class="imgContainer">
+                                        <img src="img/section-products/9-ferreteria-sencilla.png"
+                                            alt="Ferretería Sencilla">
+                                    </div>
+                                    <div class="content d-flex flex-column align-items-center justify-content-center">
+                                        <div class="orange">
+                                            <h3 class="text-white fs-6">Ferretería Sencilla</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-
-
         </div>
     </section>
+
 
     <!-- PRODUCTS SECTION END -->
 
@@ -223,7 +321,7 @@
                             <div>
                                 <span class="my-2 d-block">Disponible gratis en </span>
                             </div>
-                            <div class="apps d-flex">
+                            <div class="apps">
                                 <div class="mb-2 app ">
                                     <div class="mx-auto app-item">
                                         <img src="img/apps-logos/google-play.png" alt="Google Play">
@@ -247,7 +345,7 @@
                                     <div class="mx-auto app-item">
                                         <img src="img/apps-logos/app-galllery.png" alt="AppGallery">
                                         <div class="text-app">
-                                            <span>EXPLORA AQUÍ</span>
+                                            <span>Explora aquí</span>
                                             <h3>AppGallery</h3>
                                         </div>
                                     </div>
@@ -267,45 +365,63 @@
 
 
     <!-- MARKETING SECTION END -->
+
+
+
     <!-- ALLIES SECTION START -->
-    <section id="allies" class="allies " data-scroll-index="3">
-        <div class="text-center allies-header container-fluid ">
-            <h1>Nuestros aliados</h1>
-        </div>
-        <div class="container-fluid allies-content">
-            <div class="">
 
-                <div class=" images-allies">
-                    <img src="img/section-allies/1-argos.png" alt="Aliados">
-                    <img src="img/section-allies/2-alion.png" alt="Aliados">
-                    <img src="img/section-allies/3-cemex.png" alt="Aliados">
-                    <img src="img/section-allies/4-gerdau.png" alt="Aliados">
-                    <img src="img/section-allies/5-fortecem.png" alt="Aliados">
-                    <img src="img/section-allies/6-goya.png" alt="Aliados">
-                    <img src="img/section-allies/7-campana.png" alt="Aliados">
-                    <img src="img/section-allies/8-paz-del-rio.png" alt="Aliados">
-
-
-                </div>
-
+    <section id="allies" class="allies d-flex align-items-center" data-scroll-index="3">
+        <div class="p-0 container-fluid allies-content">
+            <div class="text-center allies-header">
+                <h1 class="m-0">Nuestros aliados</h1>
             </div>
+            <div class="row align-items-center allies-body">
+                <div class="row">
 
-            <!-- <div class="btn-2"> -->
-            <button type="button" class="btn btn-2">
-                Accede a la aplicación web
-            </button>
+                    <div class="images-allies">
+                        <div class="image-container">
+                            <img src="img/section-allies/1-argos.png" alt="Aliados">
+                        </div>
+                        <div class="image-container">
+                            <img src="img/section-allies/2-alion.png" alt="Aliados">
+                        </div>
+                        <div class="image-container">
+                            <img src="img/section-allies/3-cemex.png" alt="Aliados">
+                        </div>
+                        <div class="image-container">
+                            <img src="img/section-allies/4-gerdau.png" alt="Aliados">
+                        </div>
+                        <div class="image-container">
+                            <img src="img/section-allies/5-fortecem.png" alt="Aliados">
+                        </div>
+                        <div class="image-container">
+                            <img src="img/section-allies/6-goya2.png" alt="Aliados">
+                        </div>
+                        <div class="image-container">
+                            <img src="img/section-allies/7-campana.png" alt="Aliados">
+                        </div>
+                        <div class="image-container">
+                            <img src="img/section-allies/8-paz-del-rio.png" alt="Aliados">
+                        </div>
+                    </div>
+                </div>
+                <div class="row submit-container">
+                    <div class="text-center col-lg-12">
+                        <button type="submit" class="btn btn-2"> Accede a la aplicación web
+                        </button>
+                    </div>
+                </div>
+                <div class="allies-text">
+                    <div class="mx-auto text-center col-12 col-md-9 col-lg-8">
+                        <h1> Peruanos ayudando a más peruanos a surtir tu ferretería... </h1>
 
-            <!-- </div> -->
-
-            <div class="allies-text">
-                <div class="mx-auto col-12 col-sm-8 col-md-6">
-                    <h1> Peruanos ayudando a más peruanos a surtir tu ferretería... </h1>
+                    </div>
 
                 </div>
-
             </div>
         </div>
     </section>
+
 
 
     <!-- ALLIES SECTION END -->
@@ -321,7 +437,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-sm-12 col-md-5 col-lg-4  my-auto contact-section">
+                <div class="my-auto col-12 col-sm-12 col-md-5 col-lg-4 contact-section">
                     <div class="contact-info">
                         <h3>Para cualquier consulta</h3>
                         <div class="contact-info-detail">
@@ -380,10 +496,13 @@
                                 </div>
                             </div>
                             <div class="row">
+
+
                                 <div class="col-12 col-sm-6 col-lg-4">
                                     <div class="form-group">
-                                        <input type="text" id="distrito" name="distrito" class="form-control" required>
-                                        <label for="distrito">Distrito</label>
+                                        <input type="text" class="form-control" id="departamento" name="departamento"
+                                            required>
+                                        <label for="departamento">Departamento</label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-6 col-lg-4">
@@ -395,9 +514,8 @@
                                 </div>
                                 <div class="col-12 col-sm-6 col-lg-4">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="departamento" name="departamento"
-                                            required>
-                                        <label for="departamento">Departamento</label>
+                                        <input type="text" id="distrito" name="distrito" class="form-control" required>
+                                        <label for="distrito">Distrito</label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-6 col-lg-12">
@@ -411,7 +529,7 @@
                             </div>
 
                             <div class="row submit-container">
-                                <div class="col-lg-12 mt-4">
+                                <div class="mt-4 col-lg-12">
                                     <button type="submit" class="btn btn-2"> Enviar Datos </button>
                                 </div>
                             </div>
@@ -464,6 +582,9 @@
     </section>
 
     <!-- FOOTER SECTION END -->
+
+
+
 
 
     <!-- jquery js -->
