@@ -353,10 +353,11 @@ ul {
 .products-text h2 span {
   font-size: 40px;
   font-weight: 700;
-  background: rgb(255, 255, 255);
+  /* background: rgb(255, 255, 255); */
   background: linear-gradient(#f79375, #d96041);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: block;
 }
 
 .products-list {
@@ -365,13 +366,6 @@ ul {
   width: 450px;
   transition: all 1s ease;
 }
-/*
-.products-list img:hover {
-  transform: scale(1.07);
-  filter: brightness(1.25);
-  transition: all 0.5s ease;
-}
-*/
 
 /* Flipping cards */
 .container .box {
@@ -395,8 +389,8 @@ ul {
 
 .container .box .body .imgContainer {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0 !important;
+  left: 0 !important;
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
@@ -414,8 +408,8 @@ ul {
 .container .box .body .content {
   border-radius: 30px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0 !important;
+  left: 0 !important;
   width: 100%;
   height: 100%;
   background: var(--black-700);
@@ -426,6 +420,12 @@ ul {
 
 .container .box:hover .body {
   transform: rotateY(180deg);
+}
+
+.container .box:hover .body .content {
+  position: absolute;
+  top: 0 !important;
+  left: 0 !important;
 }
 
 .container .box:hover .body .content div {
@@ -823,7 +823,7 @@ ul {
   color: var(--black-200);
   font-weight: 500;
   display: block;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   transition: all 0.5s ease;
   text-decoration: none;
 }
@@ -912,6 +912,13 @@ ul {
   .container .box {
     height: 120px;
     width: 120px;
+  }
+
+  .products-text h2 span {
+    display: inline;
+    background: none;
+    -webkit-text-fill-color: var(--color-titulo-1);
+    color: var(--color-titulo-1);
   }
 
   /* ---------
@@ -1348,5 +1355,74 @@ ul {
   .contact-info-item {
     flex: 0 0 auto;
     width: 100%;
+  }
+}
+
+@media (max-width: 410px) {
+  /* ---------
+  PRODUCTS SECTION
+  ------------- */
+  .container .box .body {
+    width: 130px;
+    height: 130px;
+  }
+
+  /* ---------
+  MARKETING SECTION
+  ------------- */
+  .marketing-text h1 {
+    font-size: 32px;
+  }
+
+  /* ---------
+  ALLIES SECTION
+  ------------- */
+
+  .allies-text h1 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 360px) {
+  /* ---------
+  PRODUCTS SECTION
+  ------------- */
+  .container .box .body {
+    width: 120px;
+    height: 120px;
+  }
+  .container .box .body .content div h3 {
+    /* letter-spacing: 1px; */
+    font-size: 15px;
+  }
+
+  .products-text h2 {
+    font-size: 35px;
+    font-weight: 700;
+  }
+
+  .products-text h2 span {
+    font-size: 35px;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 325px) {
+  /* ---------
+  PRODUCTS SECTION
+  ------------- */
+
+  .products .products-list > div {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .container .box .body {
+    width: 150px;
+    height: 150px;
+  }
+  .container .box .body .content div h3 {
+    /* letter-spacing: 1px; */
+    font-size: 20px;
   }
 }
