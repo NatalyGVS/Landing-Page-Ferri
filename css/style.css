@@ -91,7 +91,7 @@ ul {
   padding: 80px 0;
 }
 .section-title {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 .section-title h2 {
   font-size: 40px;
@@ -621,9 +621,16 @@ ul {
 }
 
 .section-title h2 {
-  font-size: 35px;
-  font-weight: 740;
+  font-size: 40px;
+  font-weight: 700;
   color: var(--color-titulo-1);
+}
+
+.contact-form .content-button {
+  display: flex;
+}
+.contact-form .content-button span:first-child {
+  margin-right: 20px;
 }
 
 .contact-info h3,
@@ -641,7 +648,7 @@ ul {
 .contact-info-item svg {
   position: absolute;
   left: 0;
-  top: 0;
+  top: 4px;
   /* height: 40px; */
   width: 40px;
   border-radius: 50%;
@@ -669,7 +676,8 @@ ul {
 .contact-form .form-group {
   margin-bottom: 25px;
 }
-.contact-form .form-group input {
+.contact-form .form-group input,
+.contact-form .form-group textarea {
   width: 100%;
   background: none;
   color: #666;
@@ -697,20 +705,19 @@ ul {
   margin-bottom: -22px;
 }
 
-.contact form .form-group input {
-  width: 100%;
-  background: none;
-  color: var(--black-400);
-  margin: 1.5rem 0;
-  padding: 0.5rem 0;
-  font-size: 17px;
-  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
-  text-transform: none;
+.contact form .form-group input,
+.contact form .form-group textarea,
+.contact form .form-group input:hover,
+.contact form .form-group textarea:hover {
+  box-shadow: none !important;
+  border: none !important;
+  border-bottom: 1px solid var(--main-color-2) !important;
+  border-radius: 5px !important;
 }
 
 .contact form .form-group label {
   position: absolute;
-  top: 12px;
+  top: 15px;
   left: 0px;
   font-size: 17px;
   color: #666;
@@ -723,15 +730,23 @@ ul {
 
 .contact form .form-group:focus,
 .contact form .form-group input:focus ~ label,
-.contact form .form-group input:valid ~ label {
-  top: -5px;
+.contact form .form-group input:valid ~ label,
+.contact form .form-group textarea:focus ~ label,
+.contact form .form-group textarea:valid ~ label {
+  top: -10px;
   font-size: 14px;
   font-weight: 400;
   color: var(--main-color-2);
+  background-color: var(--main-color-3);
 }
 
 .contact-form .submit-container > div {
   text-align: center;
+}
+
+.contact form .form-group textarea {
+  resize: none;
+  height: 100px;
 }
 
 /* ----------- FOOTER SECTION --------------  */
@@ -747,7 +762,35 @@ ul {
 .footer img {
   max-width: 200px;
   width: 100%;
+  margin-left: 37px;
+}
+.footer .footer-img {
   margin-bottom: 100px;
+  text-align: center;
+}
+.footer .list-icon {
+  color: var(--black-000) !important;
+}
+.footer .list-icon ul {
+  list-style-type: none;
+}
+.footer .list-icon ul li {
+  border-radius: 50%;
+  background-color: var(--main-color-2);
+  margin: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+.footer .list-icon ul li:hover {
+  filter: brightness(1.1);
+}
+.footer .list-icon ul li svg {
+  padding: 3px;
+  font-size: 18px !important;
+  color: #fff !important;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .footer-col {
@@ -786,6 +829,8 @@ ul {
 }
 .footer-col ul li a:hover {
   padding-left: 7px;
+  color: var(--main-color-2);
+  font-weight: 600;
 }
 
 /* ------------ MEDIA QUERIES ---------------- */
@@ -1215,7 +1260,7 @@ ul {
     padding-left: 0px;
     font-weight: 600;
   }
-  .footer img {
+  .footer .footer-img {
     margin-bottom: 50px;
   }
 }

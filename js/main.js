@@ -10,7 +10,7 @@ $(document).ready(function () {
   });
   // *************************** Page Scrolling - ScrollIt ***************************
   $.scrollIt({
-    // topOffset: -50,
+    topOffset: -80,
     easing: "linear",
     scrollTime: 100, // tiempo de animacion
   });
@@ -19,5 +19,10 @@ $(document).ready(function () {
   $(".nav-link").on("click", function () {
     $(".navbar-collapse").collapse("hide");
   });
-  
+
+  const formulario = document.getElementById("formularioContacto");
+
+  formulario.addEventListener("submit", (e) => {
+    e.preventDefault();
+  });
 });
