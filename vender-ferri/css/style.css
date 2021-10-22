@@ -127,7 +127,7 @@ textarea {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #e9e0cf;
+  background: #d1e8e4;
   margin-right: 78px;
   position: relative;
 }
@@ -135,7 +135,7 @@ textarea {
   content: "";
   width: 58px;
   height: 2px;
-  background: #e9e0cf;
+  background: #d1e8e4;
   position: absolute;
   right: 22px;
   top: 5px;
@@ -294,7 +294,7 @@ p {
   color: #666;
 }
 .form-control:focus {
-  border-color: #e9e0cf;
+  border-color: #d1e8e4;
 }
 .form-control::-webkit-input-placeholder {
   color: #999;
@@ -346,7 +346,7 @@ textarea.form-control {
   /* height: 41px;
   width: 135px; */
   align-items: center;
-  background: #e9e0cf;
+  background: #d1e8e4;
   font-family: "Raleway", sans-serif;
   color: #666;
   cursor: pointer;
