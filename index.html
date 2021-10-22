@@ -5,6 +5,7 @@
     <title>Ferri</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="shortcut icon" href="img/logo.png"> -->
 
     <!-- font awesome icons -->
     <link rel="stylesheet" href="css/all.min.css">
@@ -36,15 +37,15 @@
                         <a class="nav-link active" data-scroll-nav="0" href="#">Inicio</a>
                     </li>
 
-                    <!-- <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" data-scroll-nav="1" href="#">Productos</a>
-                    </li> -->
+                    </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link" data-scroll-nav="2" href="#">Marketing</a>
                     </li> -->
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" data-scroll-nav="3" href="#">Aliados</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" data-scroll-nav="4" href="#">Contáctanos</a>
                     </li>
@@ -63,7 +64,7 @@
     <section id="home" class="home d-flex align-items-center" data-scroll-index="0">
         <div class="container-fluid">
             <div class="row align-items-center">
-                <div class="col-12 col-sm-12 col-md-7">
+                <div class="col-12 col-sm-8 col-md-6">
 
                     <div class="home-content">
                         <div class="home-title">
@@ -375,7 +376,7 @@
 
     <!-- ALLIES SECTION START -->
 
-    <section id="allies" class="allies d-flex align-items-center" data-scroll-index="3">
+    <section id="allies" class="allies d-flex align-items-center d-none" data-scroll-index="3">
         <div class="p-0 container-fluid allies-content">
             <div class="text-center allies-header">
                 <h1 class="m-0">Nuestros aliados</h1>
@@ -434,7 +435,7 @@
             <div class="text-center footer-img">
                 <img src="img/logo.png" alt="ferri logo">
 
-                <div class="list-icon mt-3">
+                <div class="mt-3 list-icon">
 
                     <ul class="justify-content-center d-flex">
                         <li>
@@ -470,7 +471,7 @@
                         <h3>Información</h3>
                         <ul>
                             <li> <a href="#" data-scroll-goto="4">Quiero comprar en Ferri</a> </li>
-                            <li> <a href="#" data-scroll-goto="4">Quiero vender en Ferri</a> </li>
+                            <li> <a href="/vender-ferri/index.html" target="_blank">Quiero vender en Ferri</a> </li>
                             <li> <a href="#">Política de privacidad</a> </li>
                             <li> <a href="#">Términos y condiciones</a> </li>
                         </ul>
@@ -536,13 +537,27 @@
                 <div class="col-sm-12 col-12 col-md-7 col-lg-8 contact-section">
                     <div class="contact-form">
                         <!-- <h3>Complete su información</h3> -->
-                        <div class="content-button justify-content-center mb-3">
-                            <span type=" button" class="btn btn-1 ">
+                        <div class="mb-3 content-button justify-content-center header-contact">
+                            <!-- <span type=" button" class="btn btn-1 ">
                                 Registra tu ferretería
                             </span>
                             <span type="button" class="btn btn-1 ">
                                 Registra tu inmobiliaria o constructora
-                            </span>
+                            </span> -->
+
+                            <div class="form-check form-check-inline p-2">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ferreteria"
+                                    value="option1" checked>
+                                <label class="form-check-label" for="ferreteria">Registra tu ferretería</label>
+                            </div>
+                            <div class="form-check form-check-inline p-2">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inmobiliaria"
+                                    value="option2">
+                                <label class="form-check-label" for="inmobiliaria">Registra tu inmobiliaria o
+                                    constructora</label>
+                            </div>
+
+
                         </div>
 
                         <form id="formularioContacto" action="">
@@ -561,7 +576,7 @@
                                         <label for="razonSocial">Razón Social</label>
                                     </div>
                                 </div>
-                                <div class="col-12 col-sm-12  col-md-4">
+                                <div class="col-12 col-sm-12 col-md-4">
                                     <div class="form-group">
                                         <input type="text" class="form-control" id="nombreComercial"
                                             name="nombreComercial" required>
@@ -618,9 +633,9 @@
                                 </div>
                             </div>
 
-                            <div class="row mt-2">
+                            <div class="mt-2 row">
                                 <div class="col-12">
-                                    <div class="form-group mt-2">
+                                    <div class="mt-2 form-group">
                                         <!-- <input type="text" class="form-control" id="mensaje" name="mensaje" required> -->
                                         <textarea id="mensaje" name="mensaje" cols="30" rows="10" class="mt-0"
                                             required></textarea>

@@ -672,7 +672,56 @@ ul {
   line-height: 26px;
   color: var(--black-400);
 }
+/* contact form header */
 
+.contact-form .header-contact > div:last-child {
+  margin-left: 25px;
+}
+.contact-form .header-contact label {
+  color: var(--main-color-2);
+  font-weight: 600;
+  font-size: 17px;
+  position: relative;
+}
+.contact-form .header-contact input {
+  display: none;
+}
+
+.contact-form .header-contact input:checked {
+  background-color: var(--main-color-2) !important;
+  border-color: none;
+}
+.contact-form .header-contact input:checked ~ label {
+  cursor: pointer;
+  background-color: #d2e9e5 !important;
+}
+.contact-form .header-contact input ~ label::before {
+  content: "";
+  background: url(../img/section-contact/check-circle.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  left: -40px;
+  top: 1px;
+  transform: scale(0) rotateZ(180deg);
+  transition: all 0.4s cubic-bezier(0.54, 0.01, 0, 1.49);
+}
+.contact-form .header-contact input:checked + label::before {
+  transform: scale(1) rotateZ(0deg);
+}
+.contact-form .header-contact label::after {
+  content: "";
+  border: 3px solid var(--main-color-2);
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: -42px;
+  top: -1px;
+  border-radius: 50%;
+}
+/* contact form container */
 .contact-form .form-group {
   margin-bottom: 25px;
 }
@@ -1255,6 +1304,17 @@ ul {
     flex: 0 0 auto;
     width: 50%;
   }
+  .contact-form .header-contact {
+    flex-direction: column;
+    text-align: left;
+    margin-left: 30px;
+  }
+  .contact-form .header-contact > div:last-child {
+    margin-left: 0px;
+  }
+  .contact-form .header-contact label {
+    font-size: 24px;
+  }
 
   /* ---------
   FOOTER SECTION
@@ -1271,7 +1331,14 @@ ul {
     margin-bottom: 50px;
   }
 }
-
+@media (max-width: 609px) {
+  /* ---------
+  CONTACT SECTION
+  ------------- */
+  .contact-form .header-contact label {
+    font-size: 20px;
+  }
+}
 @media (max-width: 575px) {
   /* ---------
   HOME SECTION
@@ -1355,6 +1422,10 @@ ul {
   .contact-info-item {
     flex: 0 0 auto;
     width: 100%;
+  }
+
+  .contact-form .header-contact label {
+    font-size: 17px;
   }
 }
 
