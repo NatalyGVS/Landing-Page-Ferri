@@ -116,10 +116,10 @@ form .justify-content-between > div:first-child {
   margin-right: 10px;
 }
 
-form input[type=number]::-webkit-inner-spin-button, 
-form input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+form input[type="number"]::-webkit-inner-spin-button,
+form input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 /* ----------- SEPARATOR SECTION --------------  */
 #separator {
@@ -164,10 +164,10 @@ form input[type=number]::-webkit-outer-spin-button {
   cursor: pointer;
   position: relative;
 }
-/*
+
 .faq .accordion-header::before {
   content: "\f067";
-  font-family: "FontAwesome";
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
   position: absolute;
   height: 30px;
@@ -186,7 +186,7 @@ form input[type=number]::-webkit-outer-spin-button {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   color: #fff;
-}*/
+}
 
 .faq .accordion-header:not(.collapsed) {
   background-color: var(--main-color-2);
@@ -231,6 +231,10 @@ footer a {
   text-decoration: none;
   color: var(--black-200);
   font-size: 15px;
+}
+footer a:hover {
+  color: var(--main-color-2);
+  font-weight: 600;
 }
 footer .footer-img {
   width: 120px !important;
