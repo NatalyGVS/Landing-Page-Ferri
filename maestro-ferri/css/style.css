@@ -1,0 +1,253 @@
+/* GLOBAL CSS */
+
+:root {
+  --main-color-1: #f0f0f0;
+  --main-color-2: #13a88c;
+  --main-color-3: #d2e9e5;
+
+  --color-titulo-1: #13a88c;
+  --color-titulo-2: #dc6242; /* es degradado */
+  --color-titulo-3: #dc6242; /* es degradado */
+
+  --shadow-black-100: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --shadow-black-300: 0 5px 15px rgba(0, 0, 0, 0.3);
+  --black-900: #000000;
+  --black-700: #3c3c3c;
+  --black-400: #555555;
+  --black-200: #808080;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  overflow-x: hidden;
+  background-color: #fff;
+  line-height: 1.5;
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: none !important;
+}
+
+.btn-1 {
+  background: linear-gradient(to top, var(--main-color-2), #07e2b7);
+  padding: 8px 20px;
+  border: none;
+  border-radius: 15px;
+  color: var(--main-color-1);
+  font-size: 18px;
+  /* text-transform: capitalize; */
+  transition: all 0.5s ease;
+  box-shadow: var(--shadow-black-100);
+  font-weight: 600;
+  color: #fff;
+  width: 100%;
+}
+
+.btn-1:focus,
+.btn-2:focus {
+  box-shadow: var(--shadow-black-300);
+  color: #fff;
+}
+.btn-1:hover,
+.btn-2:hover {
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
+
+  color: #fff;
+  box-shadow: var(--shadow-black-300);
+}
+/* ----------- HOME SECTION --------------  */
+.home {
+  min-height: 90vh;
+  padding: 100px 0;
+  background: url(../img/fondo3.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  /* position: relative;
+  z-index: 1; */
+  overflow-x: hidden;
+}
+.home .home-content {
+  margin-right: 45px;
+}
+
+.products-title {
+  text-align: left;
+}
+
+.home-banner img {
+  max-width: 350px;
+  width: 100%;
+  margin: 170px 0 20px 0;
+}
+
+.home .form-title {
+  font-size: 40px;
+  color: var(--color-titulo-1);
+  position: relative;
+}
+
+/* -----------FORM HOME  SECTION --------------  */
+.form-parent {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+}
+form .form-group {
+  padding: 0;
+  margin: 8px 0;
+}
+
+.my-input {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  cursor: text;
+  padding: 8px 10px;
+  transition: border 0.1s linear;
+}
+.header-title {
+  margin: 30px 0;
+}
+
+form .justify-content-between > div:first-child {
+  margin-right: 10px;
+}
+
+form input[type="number"]::-webkit-inner-spin-button,
+form input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* ----------- SEPARATOR SECTION --------------  */
+#separator {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+#separator .content {
+  /* background-color: var(--black-000) !important; */
+  height: 100px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  margin-top: -50px;
+  z-index: 2;
+
+  left: 40px;
+  top: 40px;
+  /* position: absolute; */
+}
+
+/* ------------ FAQ ---------------- */
+.faq {
+  z-index: 1;
+  overflow-x: hidden;
+  padding: 0 0 100px 0;
+}
+.faq .section-title h2 {
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--color-titulo-1);
+}
+/* ------------ FAQ ---------------- */
+.faq .accordion-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.faq .accordion-header {
+  box-shadow: var(--shadow-black-100);
+  padding: 20px 50px 20px 30px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.faq .accordion-header::before {
+  content: "\f067";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  text-align: center;
+  line-height: 30px;
+  color: var(--black-400);
+  transition: all 0.5s ease;
+}
+.faq .accordion-header:not(.collapsed)::before {
+  content: "\f068";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #fff;
+}
+
+.faq .accordion-header:not(.collapsed) {
+  background-color: var(--main-color-2);
+  box-shadow: none;
+}
+
+.faq .accordion-header h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--black-400);
+  margin: 0;
+  transition: all 0.5s ease;
+}
+.faq .accordion-header:not(.collapsed) h3:after {
+  color: #fff !important;
+}
+.faq .accordion-header:not(.collapsed) h3 {
+  color: #fff !important;
+  background-color: var(--main-color);
+}
+.faq .accordion-body {
+  padding: 20px 30px;
+  background-color: var(--black-100);
+}
+
+.faq .accordion-body p {
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--black-400);
+  line-height: 26px;
+  margin: 0;
+}
+
+/* ----------- FOOTER SECTION --------------  */
+
+footer {
+  padding: 60px 0;
+  background-color: var(--main-color-1);
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--black-200);
+  font-size: 15px;
+}
+footer a:hover {
+  color: var(--main-color-2);
+  font-weight: 600;
+}
+footer .footer-img {
+  width: 120px !important;
+}
+
+/* ----------- MEDIA QUERIES --------------  */
+@media (max-width: 768px) {
+  .home {
+    
+    background-position: right;
+
+    /* position: relative;
+    z-index: 1; */
+    overflow-x: hidden;
+  }
+}
