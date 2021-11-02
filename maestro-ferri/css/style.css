@@ -59,6 +59,67 @@ body {
   color: #fff;
   box-shadow: var(--shadow-black-300);
 }
+
+/* ------------ MODAL CONFIRMACIÓN ---------------- */
+.modal-header h5 {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--main-color-2);
+}
+.modal-body {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.modal-body p span {
+  color: var(--main-color-2);
+  font-weight: 600;
+}
+.modal-footer {
+  background-color: var(--main-color-1);
+  font-size: 14px;
+  font-style: italic;
+}
+.modal-footer .footer-container {
+  display: flex;
+}
+.modal-footer p {
+  margin-bottom: 7px !important;
+}
+
+.modal-footer p span {
+  font-weight: 600;
+}
+
+.modal-footer .list-icon ul {
+  list-style-type: none;
+}
+.modal-footer .list-icon ul li {
+  border-radius: 50%;
+  background-color: var(--main-color-2);
+  margin: 5px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+}
+.modal-footer .list-icon ul li:hover {
+  filter: brightness(1.1);
+}
+.modal-footer .list-icon ul li svg {
+  padding: 3px;
+  font-size: 14px !important;
+  color: #fff !important;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 24px;
+}
+
+@media (max-width: 490px) {
+  .modal-footer .footer-container {
+    display: block !important;
+    text-align: center;
+  }
+}
 /* ----------- HOME SECTION --------------  */
 .home {
   min-height: 90vh;
@@ -243,7 +304,6 @@ footer .footer-img {
 /* ----------- MEDIA QUERIES --------------  */
 @media (max-width: 768px) {
   .home {
-    
     background-position: right;
 
     /* position: relative;

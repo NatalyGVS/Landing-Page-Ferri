@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../css/fonts.css">
     <!-- main css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/success.css">
 
 </head>
 
@@ -27,12 +28,12 @@
             <div class="row align-items-center">
                 <div class="col-12 col-md-6">
 
-                    <div class="home-banner text-center">
+                    <div class="text-center home-banner">
                         <img src="img/banner-gana-dinero.png" alt="banner">
 
                     </div>
                 </div>
-                <div class="col-12 col-md-6 p-0 d-flex justify-content-center">
+                <div class="p-0 col-12 col-md-6 d-flex justify-content-center">
                     <div class="col-10 form-parent">
                         <div class="mx-auto text-center">
                             <div class="header-title">
@@ -45,7 +46,7 @@
                                 </h2> -->
                             </div>
                         </div>
-                        <div class="col-12 mx-auto">
+                        <div class="mx-auto col-12">
                             <div class="mx-auto">
                                 <div class="myform form ">
                                     <form id="formularioRegistro" method="post" class="">
@@ -68,13 +69,13 @@
                                             <input type="text" min="0" name="departamento" id="departamento"
                                                 class="form-control my-input" placeholder="Departamento">
                                         </div>
-                                        <div class="row m-0 justify-content-between"
+                                        <div class="m-0 row justify-content-between"
                                             style="--bs-gutter-x: 0 !important;">
-                                            <div class="col my-0 form-group">
+                                            <div class="my-0 col form-group">
                                                 <input type="text" min="0" name="provincia" id="provincia"
                                                     class="form-control my-input" placeholder="Provincia">
                                             </div>
-                                            <div class="col my-0 form-group">
+                                            <div class="my-0 col form-group">
                                                 <input type="text" min="0" name="distrito" id="distrito"
                                                     class="form-control my-input" placeholder="Distrito">
                                             </div>
@@ -87,12 +88,13 @@
                                         </div>
 
 
-                                        <div class="text-center mt-2">
-                                            <button type="submit" class="btn btn-1">Registrarme</button>
+                                        <div class="mt-2 text-center">
+                                            <button id="enviarFormTransportista" type="button"
+                                                class="btn btn-1">Registrarme</button>
                                         </div>
 
 
-                                        <!-- <p class="small mt-3">By signing up, you are indicating that you have read and
+                                        <!-- <p class="mt-3 small">By signing up, you are indicating that you have read and
                                             agree to the <a href="#" class="ps-hero__content__link">Terms of Use</a> and
                                             <a href="#">Privacy Policy</a>.
                                         </p> -->
@@ -110,7 +112,7 @@
     <!-- MARKETING SECTION START -->
 
     <div id="separator">
-        <div class="content bg-white">
+        <div class="bg-white content">
 
         </div>
     </div>
@@ -122,9 +124,9 @@
 
     <section class="faq section-padding">
         <div class="container">
-            <div class="row justify-content-center mb-4">
+            <div class="mb-4 row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="section-title text-center">
+                    <div class="text-center section-title">
                         <h2>Preguntas frecuentes</h2>
                     </div>
                 </div>
@@ -190,9 +192,9 @@
 
     <!-- FOOTER SECTION START -->
 
-    <footer class="footer text-center">
+    <footer class="text-center footer">
 
-        <div class="content-footer col-12 col-md-8 mx-auto">
+        <div class="mx-auto content-footer col-12 col-md-8">
             <p>
                 <!-- target="_blank" -->
                 <a href="#" rel="noopener noreferrer">Términos y condiciones</a>
@@ -204,7 +206,7 @@
             </p>
             <hr>
 
-            <div class="text-center footer-img mx-auto">
+            <div class="mx-auto text-center footer-img">
                 <img src="img/logo.png" alt="ferri logo" width="120">
                 <!-- <img width="100" class="footer__logo" alt="logo soyrappi rappi"> -->
 
@@ -213,6 +215,80 @@
 
     </footer>
     <!-- FOOTER SECTION END -->
+
+
+    <!-- MODAL CONFIRMACION -->
+
+    <div id="modalConfirmacion" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="px-4 modal-header">
+                    <h5 class="modal-title" id="">Registro exitoso</h5>
+                    <a class="navbar-brand">
+                        <img src="img/logo.png" alt="ferri logo" width="60px">
+                    </a>
+                </div>
+                <div class="px-4 modal-body">
+                    <div class="mx-auto sa">
+                        <div class="sa-success">
+                            <div class="sa-success-tip"></div>
+                            <div class="sa-success-long"></div>
+                            <div class="sa-success-placeholder"></div>
+                            <div class="sa-success-fix"></div>
+                        </div>
+                    </div>
+                    <div class="contenido" style="text-align: justify;">
+                        <p>
+                            Hola! Muchas gracias por registrarte.
+                        </p>
+                        <p>
+                            Somos el aliado perfecto en productos de ferretería y materiales de Construcción.
+
+                            </br>
+                            En los próximos días nos estaremos poniendo en contacto para contarte más sobre nosotros y
+                            así puedas <span>generar ingresos extra realizando envío de productos </span>de ferretería y
+                            materiales de contrucción a todos nuestros clientes Ferri.
+                        </p>
+                    </div>
+                    </p>
+
+                </div>
+                <div class="modal-footer">
+                    <div class="px-3 footer-container d-flex justify-content-between col-12">
+                        <div>
+                            <p>
+                                Síguenos en nuestas redes sociales
+                            </p>
+                        </div>
+
+                        <div class="list-icon">
+
+                            <ul class="p-0 justify-content-center d-flex">
+                                <li class="mr-2">
+                                    <a href="https://www.facebook.com/Ferri-101178789026021" target="_blank"
+                                        rel="noopener nofollow" aria-label="facebook-f">
+                                        <i class="fa-brands fa-facebook-f"></i> </a>
+                                </li>
+                                <li class="mr-2">
+                                    <a href="https://www.instagram.com/ferri_pe/?hl=es" target="_blank"
+                                        rel="noopener nofollow" aria-label="instagram">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/company/ferri-pe/?viewAsMember=true"
+                                        target="_blank" rel="noopener nofollow" aria-label="linkedin-in">
+                                        <i class="fa-brands fa-linkedin-in"></i> </a>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- jquery js -->
     <script src="../js/jquery.min.js"></script>

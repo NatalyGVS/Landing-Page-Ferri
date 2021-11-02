@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/fonts.css">
     <!-- main css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/success.css">
+
 
 </head>
 
@@ -455,12 +457,6 @@
                                 <i class="fa-brands fa-linkedin-in"></i> </a>
                             </a>
                         </li>
-                        <!-- <li>
-                            <a href="https://www.youtube.com/channel/UCBD-nke_5PXeEzThNgQKPXg" target="_blank"
-                                rel="noopener nofollow" aria-label="youtube">
-                                <i class="fa-brands fa-youtube"></i>
-                            </a>
-                        </li> -->
                     </ul>
                 </div>
 
@@ -472,7 +468,8 @@
                         <ul>
                             <li> <a href="#" data-scroll-goto="4">Quiero comprar en Ferri</a> </li>
                             <li> <a href="./vender-ferri/index.html" target="_blank">Quiero vender en Ferri</a> </li>
-                            <li> <a href="./maestro-ferri/index.html" target="_blank">Quiero ser Maestro Ferri </a> </li>          
+                            <li> <a href="./maestro-ferri/index.html" target="_blank">Quiero ser Maestro Ferri </a>
+                            </li>
                             <li> <a href="#">Política de privacidad</a> </li>
                             <li> <a href="#">Términos y condiciones</a> </li>
                         </ul>
@@ -488,7 +485,6 @@
                             <li> <a href="#">Blog</a> </li>
                             <li> <a href="./transporte-ferri/index.html" target="_blank">Conviértete en transporte de
                                     Ferri</a> </li>
-
                         </ul>
                     </div>
                 </div>
@@ -561,9 +557,8 @@
 
                         </div>
 
-                        <form id="formularioContacto" action="">
+                        <form id="formularioComprarFerri" action="">
                             <div class="row">
-
                                 <div class="col-12 col-sm-6 col-md-4 ">
                                     <div class="form-group">
                                         <input type="text" id="ruc" name="ruc" class="form-control" required>
@@ -647,7 +642,8 @@
                             </div>
                             <div class="row submit-container">
                                 <div class="mt-4 col-lg-12">
-                                    <button type="submit" class="btn btn-2"> Enviar Datos </button>
+                                    <button id="enviarFormContacto" type="submit" class="btn btn-2"> Enviar Datos
+                                    </button>
                                 </div>
                             </div>
                         </form>
@@ -658,8 +654,77 @@
     </section>
     <!--  CONTACT SECTION END -->
 
+    <!-- MODAL CONFIRMACION -->
 
+    <div id="modalConfirmacion" class="modal fade" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="px-4 modal-header">
+                    <h5 class="modal-title" id="">Registro exitoso</h5>
+                    <a class="navbar-brand" >
+                        <img src="img/logo.png" alt="ferri logo" width="60px">
+                    </a>
+                </div>
+                <div class="px-4 modal-body">
+                    <div class="mx-auto sa">
+                        <div class="sa-success">
+                            <div class="sa-success-tip"></div>
+                            <div class="sa-success-long"></div>
+                            <div class="sa-success-placeholder"></div>
+                            <div class="sa-success-fix"></div>
+                        </div>
+                    </div>
+                    <div class="contenido" style="text-align: justify;">
+                        <p>
+                            Hola! Muchas gracias por registrarte.
+                        </p>
+                        <p>
+                            Somos el aliado perfecto en <span> productos de ferretería y materiales de Construcción.
+                            </span>
+                            </br>
+                            En los próximos días nos estaremos poniendo en contacto para contarte más sobre nosotros...
+                        </p>
+                    </div>
+                    </p>
 
+                </div>
+                <div class="modal-footer">
+                    <div class="px-3 footer-container d-flex justify-content-between">
+                        <div>
+                            <p>
+                                Síguenos en nuestas redes sociales o escríbenos a nuestro correo <span>
+                                    contacto@ferri.pe</span>
+                            </p>
+                        </div>
+
+                        <div class="list-icon">
+
+                            <ul class="p-0 justify-content-center d-flex">
+                                <li class="mr-2">
+                                    <a href="https://www.facebook.com/Ferri-101178789026021" target="_blank"
+                                        rel="noopener nofollow" aria-label="facebook-f">
+                                        <i class="fa-brands fa-facebook-f"></i> </a>
+                                </li>
+                                <li class="mr-2">
+                                    <a href="https://www.instagram.com/ferri_pe/?hl=es" target="_blank"
+                                        rel="noopener nofollow" aria-label="instagram">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/company/ferri-pe/?viewAsMember=true"
+                                        target="_blank" rel="noopener nofollow" aria-label="linkedin-in">
+                                        <i class="fa-brands fa-linkedin-in"></i> </a>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- jquery js -->
     <script src="js/jquery.min.js"></script>

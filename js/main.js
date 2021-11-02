@@ -19,10 +19,18 @@ $(document).ready(function () {
   $(".nav-link").on("click", function () {
     $(".navbar-collapse").collapse("hide");
   });
+  // *************************** Formulario Comprar en Ferri ***************************
 
-  const formulario = document.getElementById("formularioContacto");
+  const formularioComprarFerri = document.getElementById(
+    "formularioComprarFerri"
+  );
 
-  formulario.addEventListener("submit", (e) => {
-    e.preventDefault();
+  // formularioComprarFerri.addEventListener("submit", (e) => {
+  //   console.log("submit en el form");
+  //   e.preventDefault();
+  // });
+
+  $("#enviarFormContacto").on("click", function () {
+    $("#modalConfirmacion").modal("show");
   });
 });

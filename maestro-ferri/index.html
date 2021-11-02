@@ -17,11 +17,14 @@
     <link rel="stylesheet" href="../css/fonts.css">
     <!-- main css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/success.css">
+
 
 </head>
 
 <body>
     <!-- HOME SECTION START -->
+
     <section id="home" class="home d-flex align-items-center">
         <div class="container">
             <div class="row align-items-center">
@@ -82,7 +85,8 @@
 
 
                                         <div class="mt-2 text-center">
-                                            <button type="submit" class="btn btn-1">Registrarme</button>
+                                            <button id="enviarFormMaestro" type="button"
+                                                class="btn btn-1">Registrarme</button>
                                         </div>
 
 
@@ -208,6 +212,81 @@
     </footer>
     <!-- FOOTER SECTION END -->
 
+
+    <!-- MODAL CONFIRMACION -->
+
+    <div id="modalConfirmacion" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="px-4 modal-header">
+                    <h5 class="modal-title" id="">Registro exitoso</h5>
+                    <a class="navbar-brand">
+                        <img src="img/logo.png" alt="ferri logo" width="60px">
+                    </a>
+                </div>
+                <div class="px-4 modal-body">
+                    <div class="mx-auto sa">
+                        <div class="sa-success">
+                            <div class="sa-success-tip"></div>
+                            <div class="sa-success-long"></div>
+                            <div class="sa-success-placeholder"></div>
+                            <div class="sa-success-fix"></div>
+                        </div>
+                    </div>
+                    <div class="contenido" style="text-align: justify;">
+                        <p>
+                            Hola! Muchas gracias por registrarte.
+                        </p>
+                        <p>
+                            Somos el aliado perfecto en productos de ferretería y materiales de Construcción.
+
+                            </br>
+                            En los próximos días nos estaremos poniendo en contacto para contarte más sobre nosotros y
+                            así puedas conocer nuestro <span>plan de incentivos refiriendo obras y proyectos de
+                                construcción </span> que estas realizando para las compras de tus clientes en productos
+                            de ferretería y
+                            materiales de construcción
+                        </p>
+                    </div>
+                    </p>
+
+                </div>
+                <div class="modal-footer">
+                    <div class="px-3 footer-container d-flex justify-content-between col-12">
+                        <div>
+                            <p>
+                                Síguenos en nuestas redes sociales
+                            </p>
+                        </div>
+
+                        <div class="list-icon">
+
+                            <ul class="p-0 justify-content-center d-flex">
+                                <li class="mr-2">
+                                    <a href="https://www.facebook.com/Ferri-101178789026021" target="_blank"
+                                        rel="noopener nofollow" aria-label="facebook-f">
+                                        <i class="fa-brands fa-facebook-f"></i> </a>
+                                </li>
+                                <li class="mr-2">
+                                    <a href="https://www.instagram.com/ferri_pe/?hl=es" target="_blank"
+                                        rel="noopener nofollow" aria-label="instagram">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/company/ferri-pe/?viewAsMember=true"
+                                        target="_blank" rel="noopener nofollow" aria-label="linkedin-in">
+                                        <i class="fa-brands fa-linkedin-in"></i> </a>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- jquery js -->
     <script src="../js/jquery.min.js"></script>
     <!-- popper js -->
@@ -218,7 +297,7 @@
     <!-- Font awesome js-->
     <script src="../js/all.min.js"></script>
     <!-- main js -->
-    <script src="js/transportista.js"></script>
+    <script src="js/maestro.js"></script>
 </body>
 
 </html>
