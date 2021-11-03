@@ -43,4 +43,8 @@ $(function () {
   $(function () {
     $("#undo_redo").multiselect();
   });
+  // *************************** Formulario Comprar en Ferri ****************************
+  $("li a[href='#finish']").on("click", function () {
+    $("#modalConfirmacion").modal("show");
+  });
 });

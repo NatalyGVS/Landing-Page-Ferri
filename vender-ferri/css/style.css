@@ -567,4 +567,84 @@ textarea.form-control {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/* ------------ MODAL CONFIRMACIÓN ---------------------- */
+.modal-header h5 {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--main-color-2);
+}
+.modal-body {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.modal-body p span {
+  color: var(--main-color-2);
+  font-weight: 600;
+}
+.modal-body p span.correo {
+  font-style: italic;
+  font-weight: 600;
+  color: #707070;
+}
+
+.modal-body .contenido p {
+  text-align: justify;
+  font-size: 16px !important;
+  font-weight: 450;
+  color: #707070;
+}
+.modal-footer {
+  background-color: var(--main-color-1);
+  font-size: 14px;
+  font-style: italic;
+}
+.modal-footer .footer-container {
+  display: flex;
+}
+.modal-footer p {
+  text-align: left;
+  margin-bottom: 7px !important;
+  font-size: 14px !important;
+  font-weight: 500;
+  color: #707070;
+}
+
+.modal-footer p span {
+  font-weight: 600;
+}
+
+.modal-footer .list-icon ul {
+  list-style-type: none;
+}
+.modal-footer .list-icon ul li {
+  border-radius: 50%;
+  background-color: var(--main-color-2);
+  margin: 5px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+}
+.modal-footer .list-icon ul li:hover {
+  filter: brightness(1.1);
+}
+.modal-footer .list-icon ul li svg {
+  padding: 3px;
+  font-size: 14px !important;
+  color: #fff !important;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 24px;
+}
+
+@media (max-width: 490px) {
+  .modal-footer .footer-container {
+    display: block !important;
+    text-align: center;
+  }
+
+  .modal-footer .footer-container div p {
+    display: block !important;
+    text-align: center;
+  }
+}
